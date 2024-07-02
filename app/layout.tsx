@@ -5,6 +5,7 @@ import "./globals.css";
 import SupabaseProvider from "@/provider/SupabaseProvider";
 import UserProvider from "@/provider/UserProvider";
 import ModelProvider from "@/provider/ModelProvider";
+import ToasterProvider from "@/provider/ToasterProvider";
 
 
 const font = Figtree({ subsets: ["latin"] });
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <ToasterProvider/>
         <SupabaseProvider>
           <UserProvider>
             <ModelProvider/>
